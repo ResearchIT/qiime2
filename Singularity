@@ -1,1 +1,1 @@
-Singularity.2017.12
+Singularity.2018.2

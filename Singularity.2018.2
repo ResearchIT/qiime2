@@ -4,7 +4,7 @@ MirrorURL: http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/$basearc
 Include: yum
 
 %environment
-PATH=/opt/conda/envs/qiime2-2017.12/bin:/opt/conda/bin:$PATH
+PATH=/opt/conda/envs/qiime2-2018.2/bin:/opt/conda/bin:$PATH
 export PATH
 
 %post
@@ -17,10 +17,10 @@ export PATH=/opt/conda/bin:$PATH
 conda install -y conda
 conda update -y conda
 
-wget https://data.qiime2.org/distro/core/qiime2-2017.12-py35-linux-conda.yml
-conda env create -n qiime2-2017.12 --file qiime2-2017.12-py35-linux-conda.yml
-rm qiime2-2017.12-py35-linux-conda.yml
-source activate qiime2-2017.12
+wget https://data.qiime2.org/distro/core/qiime2-2018.2-py35-linux-conda.yml
+conda env create -n qiime2-2018.2 --file qiime2-2018.2-py35-linux-conda.yml
+rm qiime2-2018.2-py35-linux-conda.yml
+source activate qiime2-2018.2
 
 %runscript
 exec qiime "$@"
